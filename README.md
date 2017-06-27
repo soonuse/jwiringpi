@@ -9,7 +9,7 @@ In addition, the source code (.java and .c) are provided to help users to unders
 ## How to use
 Unlike other Java wrapper for Pi's GPIO control, you can simply use this Java package in Raspbian operating system without complex settings. Just follow these 2 steps:
 
-1.  copy the file libc4jwiringpi.so to the system library.<br />
+1.  copy the file libc4jwiringpi.so to the system library path e.g. /usr/lib.<br />
         `sudo cp libc4jwiringpi.so /usr/lib`
 2.  copy the directory jwringpi to your program.
 *   Note: if you don't want to copy the library to the /usr/lib, you can specify the library path before running your Java program, like:
