@@ -19,7 +19,7 @@ Unlike other Java wrapper for Pi's GPIO control, you can simply use this Java pa
 ## Demo
 1.  copy the file libc4jwiringpi.so to /usr/lib <br />
         `sudo cp libc4jwiringpi.so /usr/lib`
-2.  create a java class named RPiGPIODemo.java with:
+2.  save the following as RPiGPIODemo.java:
 <pre>
 import jwiringpi.*;
 
