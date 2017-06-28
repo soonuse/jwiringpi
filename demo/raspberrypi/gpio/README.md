@@ -14,7 +14,7 @@ This demo is written in Java and tested on Raspberry Pi 3 Model B.
          `java -Djava.library.path=. RPiGPIODemo`
          this specify the . directory as the native library (libc4jwiringpi.so) path.
 ## Expected result
-The LED state of pin 25 will be toggled continuously.
+The LED state of pin 25 will be toggled continuously. Note: the pins are named by WiringPi pin mapping. The pin25 in WiringPi is the pin37 in physical.
 ## Raspberry Pi pin mapping
 <pre>
  +-----+-----+---------+------+---+---Pi 3---+---+------+---------+-----+-----+
