@@ -4,11 +4,11 @@ This demo is written in Java and tested with an AT24C04 EEPROM module working on
 ## How to use
 1.  Hardware connection: 
 <pre>
-    *   AT24C04     =>      RPi
-    *   VCC         ->      3.3V
-    *   GND         ->      GND
-    *   SDA         ->      SDA.1 (not SDA.0)
-    *   SCL         ->      SCL.1 (not SCL.0)
+        AT24C04     =>      RPi
+    * VCC         ->      3.3V
+    * GND         ->      GND
+    * SDA         ->      SDA.1 (not SDA.0)
+    * SCL         ->      SCL.1 (not SCL.0)
 </pre>
 2.  copy the file jwiringpi-native/libc4jwiringpi.so to the system library path e.g. /usr/lib.<br />
         `sudo cp libc4jwiringpi.so /usr/lib`
