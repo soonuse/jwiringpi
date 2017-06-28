@@ -11,9 +11,9 @@ Unlike other Java wrapper for Pi's GPIO control, you can simply use this Java pa
 
 1.  copy the file libc4jwiringpi.so to the system library path e.g. /usr/lib.<br />
         `sudo cp libc4jwiringpi.so /usr/lib`
-2.  copy the directory jwringpi to your program.
+2.  copy the directory jwringpi to your project.
 *   Note: if you don't want to copy the library to the /usr/lib, you can specify the library path before running your Java program, like:
-         `java -Djava.library.path=. YouProgram`
+         `java -Djava.library.path=. YourProgram`
          (this specify the . directory as the native library path.)
 
 ## Demo
