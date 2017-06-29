@@ -1,3 +1,23 @@
+/**
+  * @filename       : SH1106SPI.java
+  * @date           : June 29 2017
+  * @author         : soonuse from Github
+  * @description:
+  *   This class is written in Java and tested with a Waveshare SH1106 
+  *   1.3inch OLED module working on Raspberry Pi 3 Model B. 
+  ***********************************************************************
+  * This is a class for SH1106 1.3inch OLED module working on Raspberry Pi.
+  *
+  * This program is distributed in the hope that it will be useful,
+  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  * GNU Lesser General Public License for more details.
+  *
+  * You should have received a copy of the GNU Lesser General Public License
+  * along with wiringPi.  If not, see <http://www.gnu.org/licenses/>.
+  ***********************************************************************
+ */
+
 import jwiringpi.*;
 import java.awt.*;
 import java.awt.image.*;
@@ -127,8 +147,8 @@ public class SH1106SPI extends JWiringPiController {
     }
 
     public void begin() {
-        pinMode(RST_PIN,OUTPUT);
-        pinMode(DC_PIN,OUTPUT);
+        pinMode(RST_PIN, OUTPUT);
+        pinMode(DC_PIN, OUTPUT);
         wiringPiSPISetup(CHANNEL, 2000000);    //2M
         
         digitalWrite(RST_PIN,HIGH);
