@@ -15,7 +15,42 @@ Unlike other Java wrapper for Pi's GPIO control, you can simply use this Java pa
 *   Note: if you don't want to copy the library to the /usr/lib, you can specify the library path before running your Java program, like:
          `java -Djava.library.path=. YourProgram`
          (this specify the . directory as the native library path.)
+## Methods jwiringpi provides
+You can invode these methods by instantiating JWiringPiController
+### Implements JWiringPiSetupInterface
+    public native int wiringPiSetup() ;
+    public native int wiringPiSetupGpio() ;
+    public native int wiringPiSetupPhys() ;
+    public native int wiringPiSetupSys() ;
 
+### Implements JWiringPiCoreInterface
+    public native void pinMode(int pin, int mode);
+    public native void pullUpDnControl(int pin, int pud);
+    public native void digitalWrite(int pin, int value);
+    public native void pwmWrite(int pin, int value);
+    public native int digitalRead(int pin);
+    public native int analogRead(int pin);
+    public native void analogWrite(int pin, int value); 
+
+### Implements JWiringPiTimingInterface
+    public native int millis();
+    public native int micros();
+    public native void delay(int howLong);
+    public native void delayMicroseconds(int howLong);
+
+### Implements JWiringPiSPIInterface
+    public native int wiringPiSPISetup(int channel, int speed);
+    public native int wiringPiSPIDataRW(int channel, byte[] data, int len);
+
+### Implements JWiringPiI2CInterface
+    public native int wiringPiI2CSetup (int devId);
+    public native int wiringPiI2CRead (int fd);
+    public native int wiringPiI2CWrite (int fd, int data);
+    public native int wiringPiI2CWrite (int fd, byte[] data, int length);
+    public native int wiringPiI2CWriteReg8 (int fd, int reg, int data);
+    public native int wiringPiI2CWriteReg16 (int fd, int reg, int data);
+    public native int wiringPiI2CReadReg8 (int fd, int reg);
+    public native int wiringPiI2CReadReg16 (int fd, int reg);
 ## Demo
 1.  copy the file libc4jwiringpi.so to /usr/lib <br />
         `sudo cp libc4jwiringpi.so /usr/lib`
@@ -48,6 +83,7 @@ public class RPiGPIODemo {
 6.  expected result: the voltage level of pin 25 will be toggled continuously.
 *   Note: the pins are named by WiringPi pin mapping. The pin25 in WiringPi is the pin37 in physical.
 <pre>
+## Pin mapping of Raspberry Pi 3 Model B
  +-----+-----+---------+------+---+---Pi 3---+---+------+---------+-----+-----+
  | BCM | wPi |   Name  | Mode | V | Physical | V | Mode | Name    | wPi | BCM |
  +-----+-----+---------+------+---+----++----+---+------+---------+-----+-----+
