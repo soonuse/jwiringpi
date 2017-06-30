@@ -51,7 +51,8 @@ You can invode these methods by instantiating JWiringPiController
     public native int wiringPiI2CWriteReg16 (int fd, int reg, int data);
     public native int wiringPiI2CReadReg8 (int fd, int reg);
     public native int wiringPiI2CReadReg16 (int fd, int reg);
-## Demo
+## Getting started
+A demo for getting started.
 1.  copy the file libc4jwiringpi.so to /usr/lib <br />
         `sudo cp libc4jwiringpi.so /usr/lib`
 2.  save the following as RPiGPIODemo.java:
