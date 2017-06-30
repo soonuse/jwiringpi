@@ -23,18 +23,22 @@
 import jwiringpi.*;
 
 public class RPiGPIODemo {
+    public static final int HIGH = 1;
+    public static final int LOW = 0;
+    public static final int OUTPUT = 1;
+
     public static void main(String[] args) {
-        JWiringPiController c = new JWiringPiController();
-        if (c.wiringPiSetup() < 0) {
+        JWiringPiController gpio = new JWiringPiController();
+        if (gpio.wiringPiSetup() < 0) {
             System.out.println("WiringPi setup error");
             return;
         }
-        c.pinMode(25, c.OUTPUT);
+        gpio.pinMode(25, OUTPUT);
         while(true) {
-            c.digitalWrite(25, c.HIGH);
-            c.delay(1000);
-            c.digitalWrite(25, c.LOW);
-            c.delay(1000);
+            gpio.digitalWrite(25, HIGH);
+            gpio.delay(1000);
+            gpio.digitalWrite(25, LOW);
+            gpio.delay(1000);
         }
     }
 }
