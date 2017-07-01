@@ -18,39 +18,39 @@ Unlike other Java wrapper for Pi's GPIO control, you can simply use this Java pa
 ## Methods jwiringpi provides
 You can invode these methods by instantiating JWiringPiController
 ### Implements JWiringPiSetupInterface
-    public native int wiringPiSetup() ;
-    public native int wiringPiSetupGpio() ;
-    public native int wiringPiSetupPhys() ;
-    public native int wiringPiSetupSys() ;
+    int wiringPiSetup() ;
+    int wiringPiSetupGpio() ;
+    int wiringPiSetupPhys() ;
+    int wiringPiSetupSys() ;
 
 ### Implements JWiringPiCoreInterface
-    public native void pinMode(int pin, int mode);
-    public native void pullUpDnControl(int pin, int pud);
-    public native void digitalWrite(int pin, int value);
-    public native void pwmWrite(int pin, int value);
-    public native int digitalRead(int pin);
-    public native int analogRead(int pin);
-    public native void analogWrite(int pin, int value); 
+    void pinMode(int pin, int mode);
+    void pullUpDnControl(int pin, int pud);
+    void digitalWrite(int pin, int value);
+    void pwmWrite(int pin, int value);
+    int digitalRead(int pin);
+    int analogRead(int pin);
+    void analogWrite(int pin, int value); 
 
 ### Implements JWiringPiTimingInterface
-    public native int millis();
-    public native int micros();
-    public native void delay(int howLong);
-    public native void delayMicroseconds(int howLong);
+    int millis();
+    int micros();
+    void delay(int howLong);
+    void delayMicroseconds(int howLong);
 
 ### Implements JWiringPiSPIInterface
-    public native int wiringPiSPISetup(int channel, int speed);
-    public native int wiringPiSPIDataRW(int channel, byte[] data, int len);
+    int wiringPiSPISetup(int channel, int speed);
+    int wiringPiSPIDataRW(int channel, byte[] data, int len);
 
 ### Implements JWiringPiI2CInterface
-    public native int wiringPiI2CSetup (int devId);
-    public native int wiringPiI2CRead (int fd);
-    public native int wiringPiI2CWrite (int fd, int data);
-    public native int wiringPiI2CWrite (int fd, byte[] data, int length);
-    public native int wiringPiI2CWriteReg8 (int fd, int reg, int data);
-    public native int wiringPiI2CWriteReg16 (int fd, int reg, int data);
-    public native int wiringPiI2CReadReg8 (int fd, int reg);
-    public native int wiringPiI2CReadReg16 (int fd, int reg);
+    int wiringPiI2CSetup (int devId);
+    int wiringPiI2CRead (int fd);
+    int wiringPiI2CWrite (int fd, int data);
+    int wiringPiI2CWrite (int fd, byte[] data, int length);
+    int wiringPiI2CWriteReg8 (int fd, int reg, int data);
+    int wiringPiI2CWriteReg16 (int fd, int reg, int data);
+    int wiringPiI2CReadReg8 (int fd, int reg);
+    int wiringPiI2CReadReg16 (int fd, int reg);
 ## Getting started
 A demo for getting started.
 1.  copy the file libc4jwiringpi.so to /usr/lib <br />
