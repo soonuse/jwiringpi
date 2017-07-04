@@ -15,7 +15,7 @@ Please be ensure that the OLED is set to SPI mode but not I2C mode, and the SPI 
 2.  copy the file jwiringpi-native/libc4jwiringpi.so to the system library path e.g. /usr/lib.<br />
         `sudo cp libc4jwiringpi.so /usr/lib`
 3.  copy the directory jwiringpi to the directory of this project (i.e. ssd1306spi).<br />
-        `cp -rf jwiringpi SSD1306spi`
+        `cp -rf jwiringpi ssd1306spi`
 4.  run with<br />
         `java SSD1306SPIDemo`
 *   Note: if you don't want to copy the library to the /usr/lib, you can specify the library path before running your Java program, like:
