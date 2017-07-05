@@ -187,7 +187,7 @@ public class SSD1331SPI extends JWiringPiController {
         try {
             BufferedImage image = ImageIO.read(file);
             int[] pixels = image.getRGB(0, 0, image.getWidth(), image.getHeight(), new int[image.getWidth() * image.getHeight()], 0, image.getWidth());
-           for (int i = 0; i < image.getHeight(); i++) {
+            for (int i = 0; i < image.getHeight(); i++) {
                 for (int j = 0; j < image.getWidth(); j++) {
                     color = convertRGB888To565(pixels[i * image.getWidth() + j]);
                     drawPixelToFrameBuffer(j, i, color);
