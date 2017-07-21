@@ -128,7 +128,7 @@ public class SSD1331SPI extends JWiringPiController {
         wiringPiSPIDataRW(CHANNEL, subBuffer, remain);
     }
 
-    public void showString(String string, int x, int y, int fontSize, Font font, int color) {
+    public void showString(String string, int x, int y, Font font, int color) {
         BufferedImage image = new BufferedImage(OLED_WIDTH, OLED_HEIGHT, BufferedImage.TYPE_INT_RGB);
         Graphics2D g2d = image.createGraphics();
         g2d.setFont(font);
@@ -145,11 +145,11 @@ public class SSD1331SPI extends JWiringPiController {
     }
 
     public void showString(String string, int x, int y, int fontSize, int color) {
-        showString(string, x, y, fontSize, new Font("consolas", Font.PLAIN, fontSize), color);
+        showString(string, x, y, new Font("consolas", Font.PLAIN, fontSize), color);
     }
 
     public void showString(String string, int x, int y) {
-        showString(string, x, y, 12, new Font("consolas", Font.PLAIN, 12), WHITE);
+        showString(string, x, y, new Font("consolas", Font.PLAIN, 12), WHITE);
     }
 
     public void showMonoBitmap(int x, int y, short[] bmpBuffer,
