@@ -16,7 +16,7 @@ Unlike other Java wrapper for Pi's GPIO control, you can simply use this Java pa
          `java -Djava.library.path=. YourProgram`
          (this specify the . directory as the native library path.)
 ## Methods jwiringpi provides
-You can invode these methods by instantiating JWiringPiController
+You can invoke these methods by instantiating JWiringPiController
 ### Implements JWiringPiSetupInterface
     int wiringPiSetup() ;
     int wiringPiSetupGpio() ;
