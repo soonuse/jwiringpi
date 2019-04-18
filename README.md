@@ -4,7 +4,7 @@ Java implements for Raspberry Pi extension GPIO control (GPIO, SPI, I2C, PWM...)
 ## Description
 The jwiringpi project is dedicated to creating an convenient and easy-to-use Java class library for Raspberry Pi extension GPIO control (GPIO, SPI, I2C, PWM...). In fact, this project provides a wrapper for WiringPi library. So in most cases, you can use it just like wiringPi library on Raspberry Pi. Fortunately, WiringPi library is preloaded in the latest Raspbian operating system, and there are no need to do any complex settings.
 
-In addition, the source code (.java and .c) are provided to help users to understand the work of the Java native interface (JNI). You can also easily ontrol the source on Pi by Java implement the corresponding interface or just ontrol the source on Pi by Java.
+In addition, the source code (.java and .c) are provided to help users to understand the work of the Java native interface (JNI). You can also easily control the source on Pi by Java implement the corresponding interface or just control the source on Pi by Java.
 
 ## How to use
 Unlike other Java wrapper for Pi's GPIO control, you can simply use this Java package in Raspbian operating system without complex settings. Just follow these 2 steps:
